@@ -31,11 +31,15 @@ WSL (Winndows Subsystem for Linux) is a feature of Windows that enables us to ru
     ```
     wsl
     ```
-    ![microsoft store](images/Screenshot4.png)
-    Or open the downloaded distributions.
+    ![microsoft store](images/Screenshot4.png)</br>
+    Or open the downloaded distributions.</br>
     ![microsoft store](images/Screenshot5.png)
 8. Create your username and password
 9. Done 
 
-
-
+## Uninstall WSL
+1. Open Settings
+2. Click on Apps > Apps & features
+3. Searh for linux
+4. Uninstall __Windows Subsystem for Linux WSLg Preview__ and __Windows Subsystem for Linux Update__
+5. Your WSL successfully uninstalled
