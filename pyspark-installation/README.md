@@ -63,7 +63,7 @@
     ```
     spark.driver.host	localhost
     ``` 
-    then save
+    then save </br>
     ![setup spark config](images/Screenshot2.png)
 5. Restart your WSL and start using pySpark.</br>
     ![check pyspark version](images/Screenshot3.png)
