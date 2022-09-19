@@ -8,7 +8,7 @@ WSL (Winndows Subsystem for Linux) is a feature of Windows that enables us to ru
     > Check windows version using __Windows logo key__ + __R__, type __winver__, select __OK__
 
 ## Installation
-1. Run __Windows PowerShell__ as __Administrator__.
+1. Run __Windows PowerShell__ as __Administrator__.</br>
 ![run powershell as administrator](images/Screenshot1.png)
 2. install wsl using this command
     ```
@@ -18,14 +18,14 @@ WSL (Winndows Subsystem for Linux) is a feature of Windows that enables us to ru
     ```
     wsl --list --online
     ```
-    The available distributions that can be installed so far are listed on the below image.
+    The available distributions that can be installed so far are listed on the below image.</br>
     ![available linux distributions](images/Screenshot2.png)
 4. Install the available distributions using this command
     ```
     wsl --install -d <Distro>
     ```
-5. __Restart__ computer
-6. Go to __Microsoft Store__ and download the distro you have installed on your computer.
+5. Restart computer
+6. Go to __Microsoft Store__ and download the distro you have installed on your computer.</br>
     ![microsoft store](images/Screenshot3.png)
 7. Access wsl by open your __powershell__ then execute below command
     ```
@@ -38,8 +38,8 @@ WSL (Winndows Subsystem for Linux) is a feature of Windows that enables us to ru
 9. Done 
 
 ## Uninstall WSL
-1. Open Settings
-2. Click on Apps > Apps & features
+1. Open __Settings__
+2. Click on __Apps__ > __Apps & features__
 3. Searh linux on App list searchbar</br>
 ![uninstall linux](images/Screenshot6.png)
 4. Uninstall __Windows Subsystem for Linux WSLg Preview__ and __Windows Subsystem for Linux Update__
