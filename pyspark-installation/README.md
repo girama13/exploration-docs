@@ -32,7 +32,7 @@
 ### Manually Downloading
 1. Go to [Apahe Spark Download Page](https://spark.apache.org/downloads.html). Choose the Spark version then Download the Apache Spark File. Or you can direct download the Apache Spark using command below in WSL
     ```
-    https://www.apache.org/dyn/closer.lua/spark/spark-3.3.0/spark-3.3.0-bin-hadoop3.tgz
+    wget https://www.apache.org/dyn/closer.lua/spark/spark-3.3.0/spark-3.3.0-bin-hadoop3.tgz
     ```
     ![download spark](images/Screenshot1.png)
 2. Unpack the downloaded file to destination path
