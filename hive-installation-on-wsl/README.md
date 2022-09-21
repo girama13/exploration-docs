@@ -10,7 +10,6 @@ Apache Hive is an enterprise data warehouse system used to query, manage, and an
 1. Go to [Hive Download Page](https://hive.apache.org/downloads.html). In this exploration I use the __Hive 3.1.3__. Or you can direct download the Apache Spark using command below in __WSL__
     ```
     wget https://downloads.apache.org/hive/hive-3.1.3/apache-hive-3.1.3-bin.tar.gz
-
     ```
 2. Once the download process is complete, unpack the downloaded binary file to destination path.
     ```
