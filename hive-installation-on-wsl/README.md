@@ -7,7 +7,7 @@ Apache Hive is an enterprise data warehouse system used to query, manage, and an
 - __Hadoop 3.x__, please refer to this [page](../hadoop-installation-on-wsl/README.md) to install the hadoop.
 
 ## Installation
-1. Go to [Hive Download Page](). Choose the Hive version then Download the __Binary Download__. In this exploration I use the __Hive 3.1.3__. Or you can direct download the Apache Spark using command below in __WSL__
+1. Go to [Hive Download Page](https://hive.apache.org/downloads.html). In this exploration I use the __Hive 3.1.3__. Or you can direct download the Apache Spark using command below in __WSL__
     ```
     wget https://downloads.apache.org/hive/hive-3.1.3/apache-hive-3.1.3-bin.tar.gz
 
@@ -114,12 +114,11 @@ Apache Hive is an enterprise data warehouse system used to query, manage, and an
     There is only `default` database that available on your first launch. The `warehouse_db` is created manually by the author.
 
 ## Common Issues
-### Illegal character entity
+### Illegal Character Entity
 Sometimes we got an error regarding `Illegal character entity` and the error will look like below messages.</br>
 <details>
     <summary>show error</summary>
 
-    ```
     Exception in thread "main" java.lang.RuntimeException: com.ctc.wstx.exc.WstxParsingException: Illegal character entity: expansion character (code 0x8
     at [row,col,system-id]: [3215,96,"file:/home/username/hadoop/hive/conf/hive-site.xml"]
             at org.apache.hadoop.conf.Configuration.loadResource(Configuration.java:3092)
@@ -151,7 +150,6 @@ Sometimes we got an error regarding `Illegal character entity` and the error wil
             at org.apache.hadoop.conf.Configuration$Parser.parse(Configuration.java:3182)
             at org.apache.hadoop.conf.Configuration.loadResource(Configuration.java:3075)
             ... 14 more
-    ```
 </details>
 
 If the error occur, modify the `hive-site.xml` then search for the `illegal character`, this error might occur in section below
@@ -167,7 +165,6 @@ If the Derby database does not successfully initiate,  you might receive below e
 <details>
     <summary>show error</summary>
 
-    ```
     Exception in thread "main" java.lang.NoSuchMethodError: com.google.common.base.Preconditions.checkArgument(ZLjava/lang/String;Ljava/lang/Object;)V
             at org.apache.hadoop.conf.Configuration.set(Configuration.java:1357)
             at org.apache.hadoop.conf.Configuration.set(Configuration.java:1338)
@@ -186,7 +183,6 @@ If the Derby database does not successfully initiate,  you might receive below e
             at java.lang.reflect.Method.invoke(Method.java:498)
             at org.apache.hadoop.util.RunJar.run(RunJar.java:323)
             at org.apache.hadoop.util.RunJar.main(RunJar.java:236)
-    ```
 </details>
 
 If you got the above error message, you need to delete guava jar in __Hive__ and replace with the guava jar in __Hadoop__.
