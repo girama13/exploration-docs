@@ -1,4 +1,4 @@
-# How To Install Hadoop
+# How To Install Hadoop on WSL
 The Apache Hadoop software library is a framework that allows for the distributed processing of large data sets across clusters of computers using simple programming models. It is designed to scale up from single servers to thousands of machines, each offering local computation and storage.
 
 ## Prerequisite
@@ -48,16 +48,16 @@ The Apache Hadoop software library is a framework that allows for the distribute
     6. `sudo service ssh --full-restart`
 
 ## Installation
-1. Go to [Hadoop Download Page](https://hadoop.apache.org/releases.html). Choose the Hadoop version then Download the __Binary Download__. In this exploration I use the __hadoop-3.3.4__. Or you can direct download the Apache Spark using command below in __WSL__
+1. Go to [Hadoop Download Page](https://hadoop.apache.org/releases.html). Choose the Hadoop version then Download the __Binary Download__. In this exploration I use the __hadoop-3.3.4__. Or you can direct download the Apache Hadoop using command below in __WSL__
     ```
     wget https://www.apache.org/dyn/closer.cgi/hadoop/common/hadoop-3.3.4/hadoop-3.3.4.tar.gz
     ```
     ![download hadoop](images/Screenshot3.png)</br>
 2. Unpack the downloaded binary file to destination path
     ```
-    # Example destination path ~/hadoop/spark
+    # Example destination path ~/hadoop/hadoop
     mkdir -p ~/hadoop/hadoop
-    # Unpack spark file
+    # Unpack hadoop file
     tar -xvzf hadoop-3.3.4.tar.gz -C ~/hadoop/hadoop --strip 1
     ```
 3. Setup __Environment Variables__ by modify the `.bashrc`.
@@ -74,7 +74,7 @@ The Apache Hadoop software library is a framework that allows for the distribute
     export HADOOP_COMMON_HOME=$HADOOP_HOME
     export HADOOP_HDFS_HOME=$HADOOP_HOME
     export YARN_HOME=$HADOOP_HOME
-    export PATH=$SPARK_HOME/bin:$PATH:~/.local/bin:$AIRFLOW_HOME:$JAVA_HOME:$JAVA_HOME/bin:$HADOOP_HOME/bin:$HADOOP_HOME/sb>#export SPARK_DIST_CLASSPATH=$(hadoop classpath)
+    export PATH=PATH=$SPARK_HOME/bin:$PATH:~/.local/bin:$AIRFLOW_HOME:$JAVA_HOME:$JAVA_HOME/bin:$HADOOP_HOME/bin:$HADOOP_HOME/sbin
     ```
     Then apply the modified `.bashrc` file using command below
     ```
@@ -199,3 +199,4 @@ Follow below steps to configure the files:
     ```
     $HADOOP_HOME/sbin/stop-all.sh
     ```
+
