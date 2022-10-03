@@ -54,4 +54,4 @@ The Google Cloud CLI includes the `gcloud`, `gsutil` and `bq` command-line tools
 ### Authenticating using python
 1. Install `google-cloud-bigquery` library
 2. Save your json credentials
-3. Refer to this [notebook](bigquery-connect.ipynb)
+3. Refer to this [notebook](bigquery-connect.ipynb) to connect to BigQuery and execute query example
