@@ -11,7 +11,7 @@ Based on the [official website](https://debezium.io/documentation/reference/2.0/
     ```
     docker login container-registry.oracle.com
     ```
-    You need to login using your username and password. The image below the user already login before and don't need to fill the username and password.
+    You need to login using your username and password. The image below the user already login before and don't need to fill the username and password.</br>
     ![login to oracle container registry](images/Screenshot1.png)
 2. Create multiple container that we need using `docker-compose`. You can modify [docker-compose file](./docker-compose.yaml) before creating the container. Refer to [this document](https://github.com/oracle/docker-images/tree/main/OracleDatabase/SingleInstance#running-oracle-database-in-a-container) if you need to modify the Oracle environment.
     ```
@@ -19,7 +19,7 @@ Based on the [official website](https://debezium.io/documentation/reference/2.0/
     export DEBEZIUM_VERSION=1.9
     docker-compose -f docker-compose-oracle.yaml up --build
     ```
-    Open new terminal and check if all container already activated using `docker ps -a`.
+    Open new terminal and check if all container already activated using `docker ps -a`.</br>
     ![check if container is up](images/Screenshot2.png)
 3. Create directory to define the location of Fast Recovery Area (FRA)
     > The db_recovery_file_dest parameter defines the location of the Flash Recovery Area (FRA) and the db_recovery_file_dest parameter specifies the default location for the recovery area. The recovery area contains multiplexed copies of the following files: Control files, Online redo logs, Archived redo logs, Flashback logs, RMAN backups. When you use the db_recovery_file_dest parameter to specify the destination of your flash recovery area, you can use a directory, file system, or ASM disk group as your destination
@@ -62,3 +62,5 @@ Based on the [official website](https://debezium.io/documentation/reference/2.0/
     --property print.key=true \
     --topic server1.DEBEZIUM.CUSTOMERS
     ```
+    Here is the example of the output.</br>
+    ![consume messages](images/Screenshot3.png)
